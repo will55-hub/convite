@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* fundo */
+.background {
+    position: fixed;
+    inset: 0;
+    background-image: url("https://i.postimg.cc/TP5w1hYq/tropado-bode-20260415-103203-016.webp");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    z-index: -1;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 1.7;
+    white-space: pre-line;
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #d96b2b; /* laranja */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.hidden {
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <!-- TELA INICIAL -->
+    <div id="inicio">
+        <button onclick="iniciar()">Iniciar</button>
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div id="conteudo" class="hidden">
+        <div class="text">
+É com grande satisfação que convido Vossa Senhoria para uma ocasião especial que será realizada na residência do Sr. Dudu.
+
+Será um momento cuidadosamente preparado para proporcionar uma experiência agradável, marcada por boa companhia, descontração e celebração. Sua presença será de imenso valor para tornar este encontro ainda mais memorável.
+
+Contamos com sua honrosa presença para compartilhar este momento conosco.
+
+Atenciosamente,
+Will e Tropa Do Bode.
+        </div>
+
+        <button onclick="confirmar()">Confirmar presença</button>
+    </div>
+
+</div>
+
+<script>
+function iniciar() {
+    document.getElementById("inicio").style.display = "none";
+    document.getElementById("conteudo").style.display = "block";
+}
+
+function confirmar() {
+    alert("Presença confirmada com sucesso!");
+}
+</script>
+
+</body>
+</html>
